@@ -8,9 +8,13 @@ import {
   getClearCommand,
 } from "./controller/controller.js";
 
-// Define your commands using yargs
+/**
+ * Define the commands you need using 
+ * the yargs() function
+ */
 yargs(hideBin(process.argv))
   .command("list", "List all the things", () => {
+    //TODO: Add the behavior of your command here
     getListCommand();
   })
   .command(
@@ -31,6 +35,7 @@ yargs(hideBin(process.argv))
       }
     },
     (argv) => {
+      //TODO: Add the behavior of your command here
       getAddCommand(argv);
     }
   )
@@ -45,6 +50,7 @@ yargs(hideBin(process.argv))
       },
     },
     (argv) => {
+      //TODO: Add the behavior of your command here
       getRemoveCommand(argv);
     }
   )
